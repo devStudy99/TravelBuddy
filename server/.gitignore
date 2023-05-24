@@ -2,4 +2,4 @@
 .env.development
 .env.production
 /logs
-/src/utils/loggerUtil.ts
+/src/utils/loggerUtils.ts
