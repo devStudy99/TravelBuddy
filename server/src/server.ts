@@ -8,6 +8,7 @@ import path from 'path';
 import session from 'express-session';
 
 import sessionConfig from '@src/config/sessionConfig';
+import { testConnection } from '@src/config/mysqlConfig';
 
 dotenv.config({ path: `.env.${process.env.NODE_ENV}` });
 const app = express();
@@ -32,5 +33,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(session(sessionConfig));
+testConnection();
 
 export default app;
