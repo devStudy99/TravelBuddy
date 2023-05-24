@@ -9,6 +9,7 @@ import session from 'express-session';
 
 import sessionConfig from '@src/config/sessionConfig';
 import { testConnection } from '@src/config/mysqlConfig';
+import authRouter from '@src/routers/authRouter';
 
 dotenv.config({ path: `.env.${process.env.NODE_ENV}` });
 const app = express();
@@ -34,5 +35,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(session(sessionConfig));
 testConnection();
+
+app.use('/auth', authRouter);
 
 export default app;
