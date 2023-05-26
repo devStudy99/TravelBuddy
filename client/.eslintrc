@@ -5,17 +5,16 @@
   },
   "extends": [
     "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended",
     "airbnb",
     "airbnb/hooks",
-    "prettier"
+    "eslint:recommended",
+    "plugin:tailwindcss/recommended",
+    "prettier",
+    "plugin:prettier/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
-    },
-    "ecmaVersion": 2021,
+    "ecmaVersion": "latest",
     "sourceType": "module"
   },
   "plugins": ["react", "@typescript-eslint", "prettier"],
@@ -25,6 +24,10 @@
     "import/no-unresolved": "off",
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
+    "react/function-component-definition": [
+      2,
+      { "namedComponents": ["arrow-function", "function-declaration"] }
+    ],
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/no-non-null-assertion": "off",
     "arrow-body-style": "off",
@@ -39,6 +42,9 @@
     },
     "react": {
       "version": "detect"
+    },
+    "tailwindcss": {
+      "config": "tailwind.config.js"
     }
   }
 }
