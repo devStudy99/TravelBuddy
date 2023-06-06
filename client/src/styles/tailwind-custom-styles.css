@@ -53,12 +53,10 @@
     @apply bg-black-025 text-black-070;
   }
 
-  /* input */
   .input-text {
     @apply ml-4 mt-8 text-left text-12;
   }
 
-  /* input btn */
   .search-input-outline {
     @apply flex justify-between rounded-lg border-[1px] border-solid py-8 pl-18 pr-8;
   }
@@ -71,7 +69,6 @@
     @apply flex h-32 w-32 items-center justify-center rounded-lg text-10 hover:bg-black-025;
   }
 
-  /* login line 생성 */
   .login-line {
     @apply flex-center text-max my-24 text-12 text-black-350 before:mr-16 before:inline-block before:h-1 before:w-[90%] before:bg-black-070 after:ml-16 after:inline-block after:h-1 after:w-[90%] after:bg-black-070;
   }
