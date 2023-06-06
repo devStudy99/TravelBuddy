@@ -10,10 +10,18 @@
     "strict": true,
     "baseUrl": "./",
     "paths": {
-      "@src/*": ["src/*"]
+      "@src/*": ["src/*"],
+      "@config/*": ["src/config/*"],
+      "@controllers/*": ["src/controllers/*"],
+      "@middlewares/*": ["src/middlewares/*"],
+      "@passport/*": ["src/passport/*"],
+      "@public/*": ["src/public/*"],
+      "@repository/*": ["src/repository/*"],
+      "@routers/*": ["src/routers/*"],
+      "@services/*": ["src/services/*"],
+      "@utils/*": ["src/utils/*"]
     }
   },
   "include": ["src"],
   "exclude": ["node_modules"]
 }
-  
