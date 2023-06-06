@@ -22,6 +22,8 @@ module.exports = {
         'skyblue-800': '#46D4CD',
         'skyblue-900': '#44D2CB',
 
+        kakao: '#FEE500',
+
         'black-025': '#F8F9F9',
         'black-050': '#F1F2F3',
         'black-070': '#E3E5E8',
@@ -38,6 +40,7 @@ module.exports = {
       },
       boxShadow: {
         headerShadow: '0px 2px 6px rgba(0, 0, 0, 0.04)',
+        cardShadow: '0px 0px 10px rgba(0, 0, 0, 0.24)',
       },
       screens: {
         onlyMobile: { max: '767px' },
@@ -52,6 +55,7 @@ module.exports = {
       margin: px0To1000,
       borderRadius: px0To30,
       fontSize: px0To64,
+      inset: px0To64,
     },
   },
   '@tailwind base': {

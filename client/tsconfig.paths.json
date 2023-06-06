@@ -2,15 +2,25 @@
   "compilerOptions": {
     "baseUrl": "./src",
     "paths": {
-      "@apis/*": ["apis/*"],
-      "@assets/*": ["assets/*"],
-      "@img/*": ["assets/img/*"],
+      "@api/*": ["api/*"],
+      "@services/*": ["api/services/*"],
+      "@app/*": ["app/*"],
+      "@image/*": ["assets/image/*"],
       "@components/*": ["components/*"],
-      "@constants/*": ["constants/*"],
+      "@Auth/*": ["components/Auth/*"],
+      "@Login/*": ["components/Auth/Login/*"],
+      "@SignUp/*": ["components/Auth/SignUp/*"],
+      "@Common/*": ["components/Common/*"],
+      "@Input/*": ["components/Common/Input/*"],
+      "@Header/*": ["components/Common/Layout/Header/*"],
+      "@Footer/*": ["components/Common/Layout/Footer/*"],
+      "@styles/*": ["styles/*"],
       "@hooks/*": ["hooks/*"],
       "@pages/*": ["pages/*"],
-      "@redux/*": ["redux/*"],
-      "@types/*": ["types/*"],
+      "@actions/*": ["redux/actions/*"],
+      "@slices/*": ["redux/slices/*"],
+      "@store/*": ["redux/store/*"],
+      "@src/types/*": ["types/*"],
       "@utils/*": ["utils/*"]
     }
   }

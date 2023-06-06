@@ -3,36 +3,24 @@
     "browser": true,
     "es2021": true
   },
-  "extends": [
-    "plugin:react/recommended",
-    "airbnb",
-    "airbnb/hooks",
-    "eslint:recommended",
-    "plugin:tailwindcss/recommended",
-    "prettier",
-    "plugin:prettier/recommended"
-  ],
+  "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:prettier/recommended"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaVersion": "latest",
+    "ecmaVersion": "2023",
     "sourceType": "module"
+  },
+  "globals": {
+    "JSX": true,
+    "NodeJS": true
   },
   "plugins": ["react", "@typescript-eslint", "prettier"],
   "rules": {
     "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
-    "import/extensions": "off",
-    "import/no-unresolved": "off",
     "react/react-in-jsx-scope": "off",
-    "react/prop-types": "off",
-    "react/function-component-definition": [
-      2,
-      { "namedComponents": ["arrow-function", "function-declaration"] }
-    ],
-    "@typescript-eslint/explicit-module-boundary-types": "off",
-    "@typescript-eslint/no-non-null-assertion": "off",
-    "arrow-body-style": "off",
-    "import/no-extraneous-dependencies": "off",
-    "prettier/prettier": "error"
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["warn"],
+    "no-console": "off",
+    "no-useless-escape": "off" // 정규식 표현 때문에 사용
   },
   "settings": {
     "import/resolver": {
