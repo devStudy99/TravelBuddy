@@ -1,6 +1,6 @@
 import mysql, { PoolConnection } from 'mysql2/promise';
-import envConfig from '@src/config/envConfig';
-import logger from '@src/utils/loggerUtils';
+import envConfig from '@config/envConfig';
+import logger from '@utils/loggerUtils';
 
 const { mysqlProps } = envConfig;
 const db = mysql.createPool(mysqlProps);
