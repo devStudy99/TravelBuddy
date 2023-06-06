@@ -1,8 +1,6 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { ReactComponent as Logo } from '@img/logo.svg';
-import { ReactComponent as Close } from '@img/close.svg';
-import { ReactComponent as Menu } from '@img/menu.svg';
+import SearchInput from '@Input/SearchInput';
 import {
   MHeaderContainer,
   LogoWrapper,
@@ -13,15 +11,17 @@ import {
   DropdownList,
   DropdownListItem,
 } from '@Header/MHeader.styles';
-import SearchInput from '@components/common/Input/SearchInput';
+import { ReactComponent as Logo } from '@image/logo.svg';
+import { ReactComponent as Close } from '@image/close.svg';
+import { ReactComponent as Menu } from '@image/menu.svg';
 
-const MHeader = () => {
-  const [dropDown, setDropDown] = useState(false);
-  const navi = useNavigate();
+const MHeader = (): JSX.Element => {
+  const [dropDown, setDropDown] = useState<boolean>(false);
+  const navigate = useNavigate();
 
   const onDropDown = () => setDropDown(!dropDown);
   const reload = () => {
-    navi('/');
+    navigate('/');
     window.location.reload();
   };
 

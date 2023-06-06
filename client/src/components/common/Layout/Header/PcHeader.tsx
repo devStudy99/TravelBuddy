@@ -1,5 +1,5 @@
 import { Link, useNavigate } from 'react-router-dom';
-import { ReactComponent as Logo } from '@img/logo.svg';
+import HeaderInput from '@Input/SearchInput';
 import {
   PcHeaderContainer,
   HeaderContent,
@@ -9,13 +9,13 @@ import {
   LoginBtn,
   SignBtn,
 } from '@Header/PcHeader.styles';
-import HeaderInput from '@components/common/Input/SearchInput';
+import { ReactComponent as Logo } from '@image/logo.svg';
 
-const PcHeader = () => {
-  const navi = useNavigate();
+const PcHeader = (): JSX.Element => {
+  const navigate = useNavigate();
 
   const reload = () => {
-    navi('/');
+    navigate('/');
     window.location.reload();
   };
 

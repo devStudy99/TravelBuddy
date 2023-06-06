@@ -1,4 +1,4 @@
-import { Button } from '@components/common/Common.styles';
+import { Button } from '@Common/Common.styles';
 import tw from 'tailwind-styled-components';
 
 export const PcHeaderContainer = tw.div`

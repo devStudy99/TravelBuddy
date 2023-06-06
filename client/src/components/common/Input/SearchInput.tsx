@@ -1,15 +1,11 @@
-import React, { useState } from 'react';
-import { ReactComponent as Search } from '@img/search.svg';
-import {
-  SearchInputContainer,
-  SearchInputBtn,
-  SearchInputField,
-} from '@common/Input/SearchInput.styles';
+import { useState, ChangeEvent } from 'react';
+import { ReactComponent as Search } from '@image/search.svg';
+import { SearchInputContainer, SearchInputBtn, SearchInputField } from '@Input/SearchInput.styles';
 
 const SearchInput = () => {
-  const [isFocused, setIsFocused] = useState(false);
+  const [isFocused, setIsFocused] = useState<boolean>(false);
 
-  const changeInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const changeInput = (e: ChangeEvent<HTMLInputElement>) => {
     console.log(e.target.value);
   };
   const handleFocus = () => {
