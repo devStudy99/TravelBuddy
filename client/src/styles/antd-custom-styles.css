@@ -1,0 +1,17 @@
+.ant-select-selector {
+  height: 50px !important;
+  align-items: center !important;
+}
+
+.ant-checkbox-group {
+  width: 100%;
+  flex-direction: column !important;
+}
+
+.ant-checkbox-wrapper {
+  color: #9ca3af !important;
+}
+
+.ant-select-open {
+  color: red !important;
+}
