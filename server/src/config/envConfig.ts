@@ -32,4 +32,10 @@ export default {
       secure: process.env.COOKIE_SECURE === 'true',
     },
   },
+  naverSens: {
+    accessKey: process.env.NAVER_SENS_ACCESS_KEY ?? '',
+    secretKey: process.env.NAVER_SENS_SECRET_KEY ?? '',
+    serviceId: process.env.NAVER_SENS_SERVICE_ID ?? '',
+    fromPhoneNumber: process.env.NAVER_SENS_FROM_PHONE_NUMBER ?? '',
+  },
 } as const;
