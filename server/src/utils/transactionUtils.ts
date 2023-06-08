@@ -1,6 +1,5 @@
 import { PoolConnection } from 'mysql2/promise';
-import { getConnection, releaseConnection } from '@src/config/mysqlConfig';
-import logger from './loggerUtils';
+import { getConnection, releaseConnection } from '@config/mysqlConfig';
 
 type AsyncVoidFunction = (conn: PoolConnection) => Promise<void>;
 type AsyncAnyFunction = (conn: PoolConnection) => Promise<any>;
@@ -17,7 +16,6 @@ const runTxnReturn = async (logic: AsyncAnyFunction): Promise<any> => {
     if (conn) {
       conn.rollback();
     }
-    logger.error(error);
     throw error;
   } finally {
     if (conn) {
@@ -37,7 +35,6 @@ const runTxnVoid = async (logic: AsyncVoidFunction): Promise<void> => {
     if (conn) {
       conn.rollback();
     }
-    logger.error(error);
     throw error;
   } finally {
     if (conn) {
@@ -50,9 +47,9 @@ const runNonTxnReturn = async (logic: AsyncAnyFunction): Promise<any> => {
   let conn;
   try {
     conn = await getConnection();
-    await logic(conn);
+    const result = await logic(conn);
+    return result;
   } catch (error) {
-    logger.error(error);
     throw error;
   } finally {
     if (conn) {
@@ -67,7 +64,6 @@ const runNonTxnVoid = async (logic: AsyncVoidFunction): Promise<void> => {
     conn = await getConnection();
     await logic(conn);
   } catch (error) {
-    logger.error(error);
     throw error;
   } finally {
     if (conn) {
