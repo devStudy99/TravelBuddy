@@ -66,10 +66,3 @@ export const SignupWrapper = tw.div<IsMobileProps>`
   bg-black-025 
   onlyMobile:bg-white
 `;
-
-export const KakaoWrapper = tw(Button)`
-  btn-size-l
-  mb-16 w-full
-  gap-1.5 
-  bg-kakao
-`;
