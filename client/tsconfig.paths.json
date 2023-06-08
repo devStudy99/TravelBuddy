@@ -2,8 +2,6 @@
   "compilerOptions": {
     "baseUrl": "./src",
     "paths": {
-      "@api/*": ["api/*"],
-      "@services/*": ["api/services/*"],
       "@app/*": ["app/*"],
       "@image/*": ["assets/image/*"],
       "@components/*": ["components/*"],
@@ -14,12 +12,10 @@
       "@Input/*": ["components/Common/Input/*"],
       "@Header/*": ["components/Common/Layout/Header/*"],
       "@Footer/*": ["components/Common/Layout/Footer/*"],
-      "@styles/*": ["styles/*"],
+      "@features/*": ["features/*"],
       "@hooks/*": ["hooks/*"],
       "@pages/*": ["pages/*"],
-      "@actions/*": ["redux/actions/*"],
-      "@slices/*": ["redux/slices/*"],
-      "@store/*": ["redux/store/*"],
+      "@styles/*": ["styles/*"],
       "@src/types/*": ["types/*"],
       "@utils/*": ["utils/*"]
     }
