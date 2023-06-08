@@ -1,7 +1,7 @@
 import { ChangeEvent, useEffect, useState } from 'react';
 import { SignUpInputProps } from '@SignUp/SignUpTypes';
 import { ErrorMessage, Input, InputWrapper, Label } from '@Common/Common.styles';
-import { useCheckNameDuplicateQuery } from '@services/Auth/authApi';
+import { useCheckNameDuplicateQuery } from '@features/Auth/authApi';
 
 const SignUpName = ({ register, errors }: SignUpInputProps): JSX.Element => {
   const [name, setName] = useState<string>('');

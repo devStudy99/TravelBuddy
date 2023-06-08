@@ -18,21 +18,16 @@ import {
   handleRequestVerificationCode,
   handleSignUp,
   handleVerifyVerificationCode,
-} from '@api/services/Auth/authHandler';
+} from '@features/Auth/authHandler';
 import {
   useRequestVerificationCodeMutation,
   useSignUpMutation,
   useVerifyVerificationCodeMutation,
-} from '@api/services/Auth/authApi';
+} from '@features/Auth/authApi';
 import { useTimer } from '@hooks/useTimer';
-import {
-  timerAlert,
-  alreadyExpiredAlert,
-  alreadyVerifiedAlert,
-  notYetAgreedAlert,
-  notYetVerifiedAlert,
-} from '@utils/alert';
+import { timerAlert } from '@utils/customSweetAlert';
 import { validatePhoneNumber, validateVerificationCode } from '@utils/validate';
+import Swal from 'sweetalert2';
 
 const SignUpForm = (): JSX.Element => {
   const {
@@ -59,15 +54,20 @@ const SignUpForm = (): JSX.Element => {
     e.preventDefault();
     handleSubmit(async (signUpFormData: SignUpFormData) => {
       if (!isAuthenticated) {
-        notYetVerifiedAlert();
+        Swal.fire({
+          icon: 'info',
+          title: '휴대폰 번호 인증을 해주세요!',
+        });
         return;
       }
       if (!isAgreed) {
-        notYetAgreedAlert();
+        Swal.fire({
+          icon: 'info',
+          title: '필수 동의 여부를 확인해주세요!',
+        });
         return;
       }
-      const isSignUpSuccess = await handleSignUp({ signUp, signUpFormData });
-      if (isSignUpSuccess) navigate('/');
+      handleSignUp({ signUp, signUpFormData, navigate });
     })();
   };
 
@@ -87,7 +87,11 @@ const SignUpForm = (): JSX.Element => {
   const resendVerificationCodeClick = (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     if (isAuthenticated) {
-      alreadyVerifiedAlert();
+      Swal.fire({
+        icon: 'info',
+        title: '휴대폰 번호 인증 완료',
+        text: '이미 휴대폰 번호 인증이 완료되었습니다.',
+      });
       return;
     }
     const hasPassedTimeLimit = timerAlert(remainingTime);
@@ -98,7 +102,11 @@ const SignUpForm = (): JSX.Element => {
   const verifyVerificationCodeClick = (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     if (remainingTime === 0) {
-      alreadyExpiredAlert();
+      Swal.fire({
+        icon: 'error',
+        title: '인증번호 검증 실패',
+        text: '인증 시간이 만료되었습니다. 인증번호를 다시 요청주세요.',
+      });
       return;
     }
     const isVerificationCodeValid = validateVerificationCode({ getValues, setError, clearErrors });

@@ -2,7 +2,7 @@ import { ChangeEvent, useEffect, useState } from 'react';
 import { SignUpInputProps } from '@SignUp/SignUpTypes';
 import { ErrorMessage, Input, InputWrapper, Label } from '@Common/Common.styles';
 import { emailRegex } from '@utils/regex';
-import { useCheckEmailDuplicateQuery } from '@services/Auth/authApi';
+import { useCheckEmailDuplicateQuery } from '@features/Auth/authApi';
 
 const SignUpEmail = ({ register, errors }: SignUpInputProps): JSX.Element => {
   const [email, setEmail] = useState<string>('');
