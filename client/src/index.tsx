@@ -5,8 +5,8 @@ import { Provider } from 'react-redux';
 import store from '@app/store';
 import { ConfigProvider } from 'antd';
 import { theme } from '@styles/antd-theme.styles';
-import App from './App';
-import './App.css';
+import App from '@app/App';
+import '@app/App.css';
 
 const root = createRoot(document.getElementById('root')!);
 root.render(
