@@ -1,5 +1,5 @@
-import redisStore from '@src/config/redisConfig';
-import envConfig from '@src/config/envConfig';
+import redisStore from '@config/redisConfig';
+import envConfig from '@config/envConfig';
 
 const { secret, cookieProps: cookie } = envConfig.sessionProps;
 
