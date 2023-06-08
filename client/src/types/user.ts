@@ -4,6 +4,7 @@ export enum Gender {
 }
 
 export interface UserInfo {
+  id?: number;
   email: string;
   name: string;
   phoneNumber: string;
