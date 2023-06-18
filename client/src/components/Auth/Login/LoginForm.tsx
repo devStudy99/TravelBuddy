@@ -32,7 +32,7 @@ const LoginForm = (): JSX.Element => {
         <MarginBottomInput>
           <LoginEmail register={register} errors={errors} />
         </MarginBottomInput>
-        <MarginBottomInput $hasMarginBottom={false}>
+        <MarginBottomInput>
           <LoginPassword register={register} errors={errors} />
         </MarginBottomInput>
         <FindPasswordWrapper>
