@@ -4,7 +4,7 @@ import tw from 'tailwind-styled-components';
 export const PcHeaderContainer = tw.div`
   flex-center
   fixed
-  z-20
+  z-10
   w-full
   bg-white
   shadow-headerShadow

@@ -10,7 +10,7 @@ export const FindPasswordText = tw.p`
   mb-24
   mt-8
   text-right
-  text-14
+  text-sm
   text-black-200
 `;
 

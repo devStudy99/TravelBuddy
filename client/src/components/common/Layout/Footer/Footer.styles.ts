@@ -37,7 +37,7 @@ export const FooterIconWrapper = tw.div`
 export const FooterContentWrapper = tw.div`
   mt-16
   w-[90%]
-  text-12
+  text-xs
   text-black-350
 `;
 

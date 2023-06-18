@@ -44,7 +44,8 @@ export const MenuWrapper = tw.div`
   cursor-pointer
 `;
 
-export const DropdownContainer = tw.div`absolute
+export const DropdownContainer = tw.div`
+  absolute
   right-0
   top-[64px]
   flex
@@ -73,5 +74,5 @@ export const DropdownListItem = tw.li`
   cursor-pointer
   items-center
   py-12
-  text-14
+  text-sm
 `;

@@ -21,8 +21,8 @@ export const AuthFormContainer = tw.form`
 export const AuthShortCutContainer = tw.div`
   flex-center
   m-32
-  text-14
-  onlyMobile:text-12
+  text-sm
+  onlyMobile:text-xs
   `;
 
 export const AuthStatusText = tw.p`
@@ -44,7 +44,7 @@ export const AuthCountDown = tw.span`
   absolute
   right-10
   top-44
-  text-14
+  text-sm
   text-red-500
 `;
 
