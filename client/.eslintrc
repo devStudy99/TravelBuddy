@@ -20,7 +20,8 @@
     "no-unused-vars": "off",
     "@typescript-eslint/no-unused-vars": ["warn"],
     "no-console": "off",
-    "no-useless-escape": "off" // 정규식 표현 때문에 사용
+    "no-useless-escape": "off", // 정규식 표현 때문에 사용
+    "no-undef": "off"
   },
   "settings": {
     "import/resolver": {
