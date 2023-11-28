@@ -3,3 +3,4 @@
 .env.production
 /logs
 /src/utils/loggerUtils.ts
+/src/uploads
